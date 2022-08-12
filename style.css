@@ -1,0 +1,55 @@
+    html {
+        height: 100%;
+    }
+    
+    body {
+        /* background-image: linear-gradient( 45deg, hsl(0deg 0% 0%) 0%, hsl(239deg 100% 20%) 23%, hsl(239deg 100% 29%) 35%, hsl(239deg 100% 35%) 44%, hsl(239deg 100% 41%) 52%, hsl(239deg 100% 46%) 59%, hsl(239deg 100% 41%) 67%, hsl(239deg 100% 35%) 74%, hsl(239deg 100% 29%) 82%, hsl(239deg 100% 20%) 90%, hsl(0deg 0% 0%) 100%);*/
+        /*------------------------------------------*/
+        /*------------------------------------------*/
+        margin: 0;
+        padding: 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+    }
+    
+    #first-div {
+        background-image: linear-gradient( 45deg, hsl(0deg 0% 0%) 0%, hsl(239deg 100% 20%) 23%, hsl(239deg 100% 29%) 35%, hsl(239deg 100% 35%) 44%, hsl(239deg 100% 41%) 52%, hsl(239deg 100% 46%) 59%, hsl(239deg 100% 41%) 67%, hsl(239deg 100% 35%) 74%, hsl(239deg 100% 29%) 82%, hsl(239deg 100% 20%) 90%, hsl(0deg 0% 0%) 100%);
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover !important;
+        height: 100%;
+        z-index: -10;
+    }
+    
+    #top-wrapper {
+        position: absolute;
+        left: 35rem;
+    }
+    
+    #Headding {
+        color: black;
+        stroke-width: 2px;
+        text-align: center;
+        font-size: 26px;
+        /*--------------------------*/
+        text-shadow: rgb(246, 249, 251) 2px 0px 0px, rgb(246, 249, 251) 1.75517px 0.958851px 0px, rgb(246, 249, 251) 1.0806px 1.68294px 0px, rgb(246, 249, 251) 0.141474px 1.99499px 0px, rgb(246, 249, 251) -0.832294px 1.81859px 0px, rgb(246, 249, 251) -1.60229px 1.19694px 0px, rgb(246, 249, 251) -1.97998px 0.28224px 0px, rgb(246, 249, 251) -1.87291px -0.701566px 0px, rgb(246, 249, 251) -1.30729px -1.5136px 0px, rgb(246, 249, 251) -0.421592px -1.95506px 0px, rgb(246, 249, 251) 0.567324px -1.91785px 0px, rgb(246, 249, 251) 1.41734px -1.41108px 0px, rgb(246, 249, 251) 1.92034px -0.558831px 0px;
+        /*-------------------------------------*/
+    }
+    /*--------!!!!!!!Media screens!!!!!!---------------*/
+    /*-----------------------------------------------*/
+    
+    @media screen and (max-width:800px) {
+        #top-wrapper {
+            left: 0.9rem;
+        }
+    }
+    
+    @media screen and (min-width:2850px) {
+        #top-wrapper {
+            left: 55rem;
+        }
+    }
