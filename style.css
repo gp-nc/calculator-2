@@ -1,5 +1,6 @@
     html {
-        height: 100%;
+        height: 100vh !important;
+        overflow: visible;
     }
     
     body {
@@ -11,7 +12,7 @@
         background-size: contain;
         background-repeat: no-repeat;
         width: 100%;
-        height: 100%;
+        height: 100vh !important;
     }
     
     #first-div {
@@ -21,8 +22,8 @@
         width: 100%;
         background-repeat: no-repeat;
         background-size: cover !important;
-        height: 100%;
-        z-index: -10;
+        min-height: 100vh !important;
+        overflow: visible;
     }
     
     #top-wrapper {
@@ -33,12 +34,102 @@
     #Headding {
         color: black;
         stroke-width: 2px;
-        text-align: center;
         font-size: 26px;
         /*--------------------------*/
         text-shadow: rgb(246, 249, 251) 2px 0px 0px, rgb(246, 249, 251) 1.75517px 0.958851px 0px, rgb(246, 249, 251) 1.0806px 1.68294px 0px, rgb(246, 249, 251) 0.141474px 1.99499px 0px, rgb(246, 249, 251) -0.832294px 1.81859px 0px, rgb(246, 249, 251) -1.60229px 1.19694px 0px, rgb(246, 249, 251) -1.97998px 0.28224px 0px, rgb(246, 249, 251) -1.87291px -0.701566px 0px, rgb(246, 249, 251) -1.30729px -1.5136px 0px, rgb(246, 249, 251) -0.421592px -1.95506px 0px, rgb(246, 249, 251) 0.567324px -1.91785px 0px, rgb(246, 249, 251) 1.41734px -1.41108px 0px, rgb(246, 249, 251) 1.92034px -0.558831px 0px;
         /*-------------------------------------*/
+        text-align: center !important;
     }
+    
+    .main-container {
+        height: 35rem;
+        width: 25rem;
+        position: absolute;
+        z-index: 10;
+        top: 6.5rem;
+        left: 32rem;
+        /*---------------------------------------*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        border: 1px solid grey;
+    }
+    /*--------------------------------------------------*/
+    /*--------------------------------------------------*/
+    
+    .calc-container {
+        display: grid;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+    
+    #input {
+        width: 100%;
+        height: 2em;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        color: #FDFEFE;
+        padding-right: 10px;
+        font-size: 3em;
+        text-align: right;
+        background-color: #223850;
+        transition: all 0.3s ease-in
+    }
+    /*------------------------------------------------------*/
+    
+    #buttons-container {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        text-align: center;
+    }
+    /*--------------------------------------------------*/
+    /*---------------------------------------------------*/
+    /* Btn's */
+    
+    .btn {
+        display: flex;
+        font-size: 1.2em;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 30px;
+        transition: all 0.3s ease-in;
+        border: 0.3px solid rgba(251, 253, 255, 0.171);
+    }
+    
+    .dot {
+        grid-column: span 2;
+    }
+    
+    .equal {
+        grid-row: span 2;
+    }
+    
+    .btn-num {
+        background-color: #223850;
+        color: #6885A7;
+    }
+    
+    .btn-num:hover {
+        background-color: #233B55;
+    }
+    
+    .btn-operator {
+        background-color: #128094;
+        color: #ffffff;
+    }
+    
+    .btn-operator:hover {
+        background-color: rgb(52, 155, 196) !important
+    }
+    
+    .equal {
+        background-color: #e77c18;
+    }
+    /*-------------------------------------------------*/
+    /*-------------------------------------------------*/
     /*--------!!!!!!!Media screens!!!!!!---------------*/
     /*-----------------------------------------------*/
     
@@ -46,10 +137,16 @@
         #top-wrapper {
             left: 0.9rem;
         }
+        .main-container {
+            left: 0.9rem;
+        }
     }
     
     @media screen and (min-width:2850px) {
         #top-wrapper {
+            left: 55rem;
+        }
+        .main-container {
             left: 55rem;
         }
     }
